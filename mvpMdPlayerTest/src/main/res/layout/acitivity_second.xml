@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher"
+        android:clickable="true" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/iv_right"
+        android:layout_height="fill_parent">
+        <!--可以在程序中根据抽屉菜单 切换Fragment-->
+        <FrameLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#0000ff"></FrameLayout>
+        <!--左边抽屉菜单-->
+        <RelativeLayout
+            android:id="@+id/menu_layout_left"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#ff0000">
+
+            <ListView
+                android:id="@+id/menu_listView_l"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </RelativeLayout>
+        <!--右边抽屉菜单-->
+        <RelativeLayout
+            android:id="@+id/menu_layout_right"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#00ff00">
+
+            <ListView
+                android:id="@+id/menu_listView_r"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
